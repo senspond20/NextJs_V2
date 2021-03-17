@@ -1,9 +1,23 @@
-import Layout from '../components/Layout'
+import History from '../components/History';
+const styles = {
+  from: {
+      color: 'red',
+  },
+};
 
-export default function Home() {
+export default (props) => {
+  const { router } = props;
   return (
-    <div>
-      <Layout/>
-    </div>
-  )
+      <div>
+          Home
+          {/* {
+              router.query.history ? (
+                  <div style={styles.from}>
+                      From the {router.query.history}
+                  </div>
+              ) : null
+          } */}
+          <History/>
+      </div>
+  );
 }
